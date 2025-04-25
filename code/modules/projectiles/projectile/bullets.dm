@@ -69,6 +69,56 @@
 
 /* short-casing projectiles, like the kind used in pistols or SMGs */
 
+// DISCLAIMER: ACE WAS HERE, SO ALL "ANGRY" COMMENTS FOLLOWING THIS ARE MADE TO BE INFORMATIVE BUT COMEDIC SO YOU PAY ATTENTION TO WHAT IS SAID.
+
+// Okay so this is how this shit is going to work from now on and if any of you future devs tries to snowflake in new bullshit I am going to shoot you myself. :)
+// We're going settle this argument between gun autists and sissy liberal game designers who know nothing about guns (or don't care) once and for all.
+
+// Did you make a new gun? New ammo? Good for you. You are NOT making new projectiles. You are going to use what we have and you are going to fucking like it.
+// What's that? "muh lord's caliber .45 ACP" is supposed to do more damage than that lousy 9mm? Well good for you, you're wrong. The difference is negligable.
+// Oh, you want your Space AK to do more than the Space AR? Bite me, you get the same bullet because the difference in real life is still negligable.
+// You're fighting over such short ranges in such a simplified environment that this is the best you're going to get between realism and gameplay.
+// SO SUCK MY DICK, THIS IS HOW WE'RE DOING IT.
+
+// PLINKING CALIBER PROJECTILES
+// We're talking .22LR at best. These will struggle to kill ANYTHING and are better suited for practice.
+// Use these level of bullets practice weapons that you throw on a gun range but and don't want players to kill things with unless they tried really hard.
+// Also, do not make a "practice" round, make wax training round. I'll get to that later.
+
+// PISTOL CALIBER PROJECTILES
+// Pistols are weak, but they shouldn't be so weak as to not fuck you up. A security officer should be able to get by with their handgun.
+// I don't wanna hear your arguing between 9mm and "muh .45 the lord's caliber" fudds. Pistol calibers do the same damage. I don't care what happened
+// in the Moro Rebellion, modern ammunition has very similar performance until you get into the REALLY heavy calibers.
+
+// INTERMEDIATE CALIBER PROJECTILES
+// Now we're getting into the good shit. Consider this as THE MOST COMMON kind of bullet you're going to see shot around in this game.
+// Real world equivalents like 5.56mm, 5.45mm, 5.8mm, 7.62x39 (specifically the 7.62 for the AK-47) and we're also talking about things
+// like heavy caliber pistols where the stopping power actually does get better. So now we're into .44 Magnum, .357 Magnum, and .50 AE
+
+// FULL RIFLE CALIBER PROJECTILES
+// This stuff is potent. We're talking battle rifles, sniper rifles, general purpose machine guns...
+// This is your 8mm Mauser, 7.62x51 NATO, 7.62x54mmR, that kind of thing. The weapons using these are dangerous but have a lot of kick and are not
+// practical to be firing in full auto, but you also often don't need to. Shotgun slugs will also do this amount of damage. I mean there's more
+// nuance than that, but for our purposes, full rifle caliber = shotgun slug worth of damage. It's going to be very punchy.
+
+// ANTI-MATERIEL CALIBER PROJECTILES
+// If you shoot this at a player, limbs are going to come flying off, assuming it doesn't just kill them. These are calibers you should be shooting
+// at mechs and vehicles rather than people. Do not make these kinds of weapons easy to come across by players, and if you do, make them difficult to use.
+// We're in the territory of .338 Lapua Magnum, .50 BMG, 14x114mm, that kind of stuff.
+
+// ANTI-AIRCRAFT CANNON PROJECTILE
+// I'm not doing these. But if I did, these whould have damage levels to be instantly fatal to players and destroy a mech in just a few hits.
+// 20mm, 25mm, 30mm, 40mm...
+
+// ANTI-TANK CANNON PROJECTILE
+// stop, please, he's already dead
+// but these will one-hit mechs pretty consistently
+// 50mm, 75mm, 8.8cm... At the time of writing, there is exactly ONE THING in the WHOLE GAME that uses one of these and it's from a boss fight with a space Nazi mech.
+
+// EXOTIC PROJECTILES
+// This is all the weird shit that doesn't fit into other categories.
+// This is the only time you should be making new projectiles for something that has weird effects.
+
 /obj/item/projectile/bullet/pistol // 9mm pistols and most SMGs. Sacrifice power for capacity.
 	fire_sound = 'sound/weapons/gunshot2.ogg'
 	damage = 20
@@ -316,8 +366,6 @@
 
 /obj/item/projectile/bullet/incendiary/flamethrower/after_move()
 	..()
-
-
 	var/turf/T = get_turf(src)
 	if(istype(T))
 		for(var/obj/effect/plant/Victim in T)
